@@ -39,7 +39,7 @@ class RegisteredUserController extends Controller
             'name' => $request->name,
             'email' => $request->email,
             'password' => Hash::make($request->password),
-            'role' => User::ROLE_ADMIN, // Asignar rol de administrador por defecto
+            'role' => User::ROL_ADMIN, // Asignar rol de administrador por defecto
         ]);
 
         event(new Registered($user));
